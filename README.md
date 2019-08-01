@@ -1,2 +1,2 @@
-# BaceFook
-A basic facebook clone
+# Animal Rescue Resource or Center
+An animal rescue resource or center
