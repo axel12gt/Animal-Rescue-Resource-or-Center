@@ -1,3 +1,4 @@
+//Importing the react library and all of our components
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
