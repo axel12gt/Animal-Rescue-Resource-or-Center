@@ -4,7 +4,8 @@
   "description": "A resource for gathering information on wild animals and how to care for them",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
   "dependencies": {
     "concurrently": "^4.1.1",
     "express": "^4.17.1"
-  },
+  },  
   "devDependencies": {
     "nodemon": "^1.19.1"
   }
