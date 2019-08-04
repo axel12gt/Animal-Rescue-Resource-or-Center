@@ -1,0 +1,23 @@
+{
+  "name": "animal-rescue-resource-or-center",
+  "version": "1.0.0",
+  "description": "A resource for gathering information on wild animals and how to care for them",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axel12gt/Animal-Rescue-Resource-or-Center.git"
+  },
+  "author": "Dameon Brown & Brian Corbet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axel12gt/Animal-Rescue-Resource-or-Center/issues"
+  },
+  "homepage": "https://github.com/axel12gt/Animal-Rescue-Resource-or-Center#readme",
+  "dependencies": {
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1"
+  }
+}
