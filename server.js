@@ -2,7 +2,7 @@ const express = require("express")
 
 const app = express()
 
-const port = 3001
+const PORT = 3001
 
 app.get("/api/customers", (req,res) => {
     const customers =[
@@ -14,4 +14,4 @@ app.get("/api/customers", (req,res) => {
         res.json(customers)
 })
 
-app.listen(port, () => console.log(`server started on https://localhost:${port}`))
+app.listen(PORT, () => console.log(`server started on http://localhost:${PORT}`))
