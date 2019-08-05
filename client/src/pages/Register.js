@@ -36,7 +36,7 @@ function Register() {
                 id="password"
                 name="password"
                 className="form-control"
-                placeholder="create Password"
+                placeholder="Create Password"
                 // value="<%= typeof name != 'undefined' ? name : '' %>"
               />
             </div>
