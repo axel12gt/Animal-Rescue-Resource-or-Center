@@ -30,6 +30,28 @@ function Register() {
               />
             </div>
             <div className="form-group">
+                            <label for="phonenumber">Phone Number</label>
+                            <input
+                                type="phonenumber"
+                                id="phonenumber"
+                                name="phonenumber"
+                                className="form-control"
+                                placeholder="Enter Phone Number"
+                            // value="<%= typeof name != 'undefined' ? name : '' %>"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label for="address">Address</label>
+                            <input
+                                type="address"
+                                id="address"
+                                name="address"
+                                className="form-control"
+                                placeholder="Enter Address"
+                            // value="<%= typeof name != 'undefined' ? name : '' %>"
+                            />
+                        </div>
+            <div className="form-group">
               <label for="password">Password</label>
               <input
                 type="password"
