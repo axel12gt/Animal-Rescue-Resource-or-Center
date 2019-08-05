@@ -1,5 +1,5 @@
 module.exports = {
-  create: (req, res) => {
+  findAll: (req, res) => {
     const customers = [
       { id: 1, firstName: "Jack", lastName: "Jill" },
       { id: 2, firstName: "Mack", lastName: "Hill" },
