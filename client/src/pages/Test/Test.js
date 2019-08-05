@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../logo.svg';
-import Customers from "../../components/customers"
+import Customers from "../../components/Customers"
 import './Test.css';
 
 function Test() {
