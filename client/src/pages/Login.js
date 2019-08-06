@@ -8,8 +8,8 @@ function Login() {
           <div className="card card-body">
             <h1 className="text-center mb-3">Login</h1>
             <form action="users/login" method="POST">
-              <div class="form-group">
-                <label for="email">Email</label>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -18,7 +18,7 @@ function Login() {
                   placeholder="Enter Email"
                 />
                 <div className="form-group mt-3">
-                  <label for="password">Password</label>
+                  <label htmlFor="password">Password</label>
                   <input
                     type="password"
                     id="password"
@@ -26,10 +26,10 @@ function Login() {
                     className="form-control"
                     placeholder="Enter Password"
                   />
-                  <button type="submit" class="btn btn-primary btn-block mt-3">
+                  <button type="submit" className="btn btn-primary btn-block mt-3">
                     Login
                   </button>
-                  <p class="lead mt-4">
+                  <p className="lead mt-4">
                     No Account? <a href="/users/register">register</a>
                   </p>
                 </div>

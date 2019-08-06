@@ -1,14 +1,34 @@
 import React from "react";
+import axios from "axios"
 
 function Register() {
+  const fn = (e) => {
+    let name = document.getElementById("name").value
+    let email = document.getElementById("email").value
+    let password = document.getElementById("password").value
+    let confirmPassword = document.getElementById("password2").value
+    console.log(name, email, password, confirmPassword)
+    axios.post("/users/register", {
+      name,
+      email,
+      password,
+      confirmPassword
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+
+
   return (
     <div className="row mt-5">
       <div className="col-md-6 m-auto">
         <div className="card card-body">
           <h1 className="text-center mb-3">Register</h1>
-          <form action="/users/register" method="POST">
+          <form onSubmit={(e) => fn(e)}>
             <div className="form-group">
-              <label for="name">Name</label>
+              <label htmlFor="name">Name</label>
               <input
                 type="name"
                 id="name"
@@ -16,10 +36,11 @@ function Register() {
                 className="form-control"
                 placeholder="Enter Name"
                 // value="<%= typeof name != 'undefined' ? name : '' %>"
+                value="test"
               />
             </div>
             <div className="form-group">
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 id="email"
@@ -27,32 +48,11 @@ function Register() {
                 className="form-control"
                 placeholder="Enter Email"
                 // value="<%= typeof name != 'undefined' ? name : '' %>"
+                value="test@email.com"
               />
             </div>
             <div className="form-group">
-                            <label for="phonenumber">Phone Number</label>
-                            <input
-                                type="phonenumber"
-                                id="phonenumber"
-                                name="phonenumber"
-                                className="form-control"
-                                placeholder="Enter Phone Number"
-                            // value="<%= typeof name != 'undefined' ? name : '' %>"
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label for="address">Address</label>
-                            <input
-                                type="address"
-                                id="address"
-                                name="address"
-                                className="form-control"
-                                placeholder="Enter Address"
-                            // value="<%= typeof name != 'undefined' ? name : '' %>"
-                            />
-                        </div>
-            <div className="form-group">
-              <label for="password">Password</label>
+              <label htmlFor="password">Password</label>
               <input
                 type="password"
                 id="password"
@@ -60,10 +60,11 @@ function Register() {
                 className="form-control"
                 placeholder="Create Password"
                 // value="<%= typeof name != 'undefined' ? name : '' %>"
+                value="yes"
               />
             </div>
             <div className="form-group">
-              <label for="password2">Confirm Password</label>
+              <label htmlFor="password2">Confirm Password</label>
               <input
                 type="password"
                 id="password2"
@@ -71,13 +72,16 @@ function Register() {
                 className="form-control"
                 placeholder="Confirm Password"
                 // value="<%= typeof name != 'undefined' ? name : '' %>"
+                value="yes"
               />
             </div>
-            <button type="submit" class="btn btn-primary btn-block">
+            <button type="submit" className="btn btn-primary btn-block">
               Register
             </button>
           </form>
-          <p className="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+          <p className="lead mt-4">
+            Have An Account? <a href="/users/login">Login</a>
+          </p>
         </div>
       </div>
     </div>
