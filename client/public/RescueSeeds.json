@@ -1,0 +1,51 @@
+[
+    {
+        "Type": "squirrel",
+        "Name": "Back to Nature Wildlife Refuge",
+        "Address": "10525 Clapp Simms Duda Rd, Orlando, FL 32832",
+        "Phone": "407-568-5138",
+        "Website": "http://www.btnwildlife.org"
+        
+    },
+
+    {
+        "Type": "squirrel",
+        "Name": "Squirrel Angel",
+        "Address": "None",
+        "Phone": "321-747-7733",
+        "Website": "http://squirrelangel.org"  
+    },
+
+    {
+        "Type": "raccoon",
+        "Name": "Back to Nature Wildlife Refuge",
+        "Address": "10525 Clapp Simms Duda Rd, Orlando, FL 32832",
+        "Phone": "407-568-5138",
+        "Website": "http://www.btnwildlife.org"
+    },
+
+    {
+        "Type": "raccoon",
+        "Name": "The Haven for Injured and Orphaned Wildlife",
+        "Address": "610 Birch Blvd. Altamonte Springs, Fl 32701",
+        "Phone": "407-260-6137",
+        "Website": "http://thehavenonline.org"
+    },
+
+    {
+        "Type": "turtle",
+        "Name": "Fallin Pines Critter Rescue Inc.",
+        "Address": "23643 Christmas Cemetery Rd.  Christmas, FL 32709",
+        "Phone": "407-568-7988",
+        "Website": "www.fallinpinesrescue.org"  
+    },
+
+    {
+        "Type": "snake",
+        "Name": "Central Florida Reptile Rescue.",
+        "Address": "517 N Harbor City Blvd, Melbourne, FL 32935",
+        "Phone": "321-591-6873",
+        "Website": "http://centralfloridareptilerescue.com/"
+    }
+
+]
