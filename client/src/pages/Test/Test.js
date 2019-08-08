@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../logo.svg';
-import Customers from "../../components/customers"
 import './Test.css';
 
 function Test() {
@@ -12,7 +11,6 @@ function Test() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
       </header> 
-      <Customers />
     </div>
   );
 }
