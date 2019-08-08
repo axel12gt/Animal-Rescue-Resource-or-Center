@@ -6,7 +6,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const passport = require("passpwer");
-const localStrategy = require("passport-local").Strategy;
+const LocalStrategy = require("passport-local").Strategy;
 const flash = require("connect-flash");
 const routes = require("./routes/api");
 
@@ -26,8 +26,7 @@ app.use(
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: false
-  })
-);
+  }));
 app.use(passport.initialize());
 app.use(flash());
 
@@ -47,14 +46,19 @@ app.use((req, res, next) => {
   next(err);
 });
 
+// Server-Side Authentication
+const Account = require('./models/account');
+passport.use(new LocalStrategy(Account.authenticate()));
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());
+
 // Mongoose
 mongoose
   .connect(process.env.MONGODB_URI || "mongodb://localhost/animalRescue")
   .then(() => console.log("mongodb connected"))
   .catch(err => console.log(err));
 
-// Error Handling
-
+/* Error Handling */
 // Dev Error Handling
 if (app.get("env") === "development") {
   app.use((err, req, res, next) => {
