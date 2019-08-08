@@ -47,7 +47,7 @@ app.use((req, res, next) => {
 });
 
 // Server-Side Authentication
-const Account = require('./models/account');
+const Account = require('./models/Users');
 passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());

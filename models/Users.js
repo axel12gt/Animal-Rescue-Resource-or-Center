@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const passportLocalMonggose = require("passport-local-mongoose");
 
-const User = new mongoose.Schema({
+const Users = new mongoose.Schema({
   name: {
     type: String,
     required: True
@@ -22,4 +22,4 @@ const User = new mongoose.Schema({
 
 Account.plugin(passportLocalMonggose);
 
-module.exports = User;
+module.exports = Users;
