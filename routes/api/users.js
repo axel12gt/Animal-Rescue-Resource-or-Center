@@ -1,16 +1,20 @@
 const router = require("express").Router();
-const customersController = require("../../controllers/customersController");
+const passport = require("passport");
+const usersController = require("../../controllers/usersController");
 
-router.route("/login").get(customersController.login);
-// router.route("/register").get(customersController.register);
-router.route("/register").post((req, res, next) => {
-    console.log('bruh')
-    console.log(req)
-})
-// Regiser Handle
-// router.post("/register", (req, res) => {
-//     console.log(req)
-//     res.send("test")
-// })
+// Matchers with "/api/users"
+router.route("/").get(usersController.getUser);
 
+// Authentication Routes
+router.route("/register").post(usersController.register);
+
+router
+  .route("/login")
+  .post(
+    passport.authenticate("local", { failureRedirect: "./>error=LoginError" }),
+    usersController.login
+  );
+
+// Matches with "/api/users/:id"
+router.route("/users/:id")
 module.exports = router;

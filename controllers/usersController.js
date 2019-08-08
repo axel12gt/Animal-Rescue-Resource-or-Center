@@ -40,6 +40,14 @@ module.exports = {
       res.status(200).send("OK");
     });
   },
+  logout: (req, res, next) => {
+    req.logout()
+    req.session.save((err => {
+      if (err) return next(err)
+
+      res.status(200).send("OK")
+    }))
+  },
   test: (req, res, next) => {
     console.log(`Ping Dinger ${req.statusCode}`)
 
