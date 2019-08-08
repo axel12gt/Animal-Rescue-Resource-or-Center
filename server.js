@@ -5,7 +5,7 @@ const logger = require("morgan");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const passport = require("passpwer");
+const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const flash = require("connect-flash");
 const routes = require("./routes/api");
@@ -75,7 +75,7 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.json({
     message: err.message,
-    eroor: {}
+    error: {}
   });
 });
 

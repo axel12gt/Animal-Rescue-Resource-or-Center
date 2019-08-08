@@ -14,7 +14,7 @@ import Register from "./components/Register";
 import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/PublicRoute";
-import "./App.css";
+
 
 //I want to add some basic inline styling here, even though we are bringing in styles
 const listStyle = {
@@ -22,7 +22,7 @@ const listStyle = {
   listStyle: "none"
 };
 //Now we have all the stuff we need .. let's render some components with the Router
-const Auth = () => (
+const App = () => (
   <Router>
     <div>
       <Nav className="App-header" />
@@ -89,4 +89,4 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   />
 );
 
-export default Auth;
+export default App;

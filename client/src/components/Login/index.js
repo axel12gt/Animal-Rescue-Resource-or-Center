@@ -12,7 +12,7 @@ class Login extends React.Component {
         This will get passed down as a prop to the LoginForm */
 	login = (data) => {
 		console.log('Logging in ' + data.username);
-		fetch('api/users/login', {
+		fetch('users/login', {
 			method: 'POST',
 			body: JSON.stringify(data),
 			credentials: 'include',
