@@ -9,26 +9,28 @@ import {
 } from "react-router-dom";
 import Auth from "./utils/Auth";
 import Nav from "./components/Nav";
+// import Navbar from "./components/Navbar"
 import Login from "./components/Login";
 import Register from "./components/Register";
 import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/PublicRoute";
+import "./App.css"
 
 
 //I want to add some basic inline styling here, even though we are bringing in styles
-const listStyle = {
-  color: "cornflowerblue",
-  listStyle: "none"
-};
+// const listStyle = {
+//   color: "cornflowerblue",
+//   listStyle: "none"
+// };
 //Now we have all the stuff we need .. let's render some components with the Router
 const App = () => (
   <Router>
     <div>
       <Nav className="App-header" />
       <Container>
-        <AuthButton />
-        <ul style={listStyle}>
+        {/* <AuthButton /> */}
+        {/* <ul style={listStyle}>
           <li>
             <Link to="/public">Public Page</Link>
           </li>
@@ -38,10 +40,10 @@ const App = () => (
           <li>
             <Link to="/register">Register a New User</Link>
           </li>
-        </ul>
+        </ul> */}
         <Switch>
           <Route path="/public" component={PublicRoute} />
-          <Route path="/login" component={Login} />
+          <Route exact path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <PrivateRoute path="/protected" component={ProtectedRoute} />
           {/* <Route component={NoMatch} /> */}
@@ -49,25 +51,6 @@ const App = () => (
       </Container>
     </div>
   </Router>
-);
-
-//Authbutton component / withRouter is imported from react-router
-const AuthButton = withRouter(({ history }) =>
-  Auth.isAuthenticated ? (
-    <div className="container">
-      <p>Success! You are Logged In!</p>
-      <button
-        className="btn btn-danger"
-        onClick={() => {
-          Auth.signout(() => history.push("/"));
-        }}
-      >
-        Sign out
-      </button>
-    </div>
-  ) : (
-    <p>You are not logged in.</p>
-  )
 );
 
 // This is the private route component this checks for an authorized user here
@@ -88,5 +71,25 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
     }
   />
 );
+
+// //Authbutton component / withRouter is imported from react-router
+// const AuthButton = withRouter(({ history }) =>
+//   Auth.isAuthenticated ? (
+//     <div className="container">
+//       <p>Success! You are Logged In!</p>
+//       <button
+//         className="btn btn-danger"
+//         onClick={() => {
+//           Auth.signout(() => history.push("/"));
+//         }}
+//       >
+//         Sign out
+//       </button>
+//     </div>
+//   ) : (
+//     ""
+//   )
+// );
+
 
 export default App;

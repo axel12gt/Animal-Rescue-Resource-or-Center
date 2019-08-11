@@ -53,7 +53,7 @@ class RegisterForm extends React.Component {
               </button>
             </form>
             <p className="lead mt-4">
-              Have An Account? <a href="/login">Login</a>
+              Have An Account? <a href="./login">Login</a>
             </p>
           </div>
         </div>

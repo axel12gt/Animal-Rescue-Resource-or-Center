@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./style.css";
+import { Link } from "react-router-dom";
+import AuthButton from "../AuthButton"
 // import Login from "../LoginForm";
 
 class Nav extends Component {
@@ -33,9 +35,9 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2 d-flex justify-content-between">
         <Link className="navbar-brand" to="/">
-          Auth Plate
+          Animal Rescue Resource
         </Link>
         <button
           onClick={this.toggleNav}
@@ -48,17 +50,35 @@ class Nav extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`} id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
+        <div class="d-inline-flex" id="navbarNav">
+          
+            <AuthButton />
+            {/* <li className="nav-item">
               <Link
                 onClick={this.toggleNav}
-                className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
+                className={
+                  window.location.pathname === "/"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
                 to="/login"
               >
                 Login
               </Link>
             </li>
+            <li className="navbar-nav">
+              <Link
+                onClick={this.toggleNav}
+                className={
+                  window.location.pathname === "/"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+                to="/register"
+              >
+                Register
+              </Link>
+            </li> */}
             {/* <li className="nav-item">
               <Link
                 onClick={this.toggleNav}
@@ -77,7 +97,6 @@ class Nav extends Component {
                 Saved
               </Link>
             </li> */}
-          </ul>
         </div>
       </nav>
     );
