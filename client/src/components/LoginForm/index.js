@@ -52,7 +52,7 @@ class LoginForm extends React.Component {
                       Login
                     </button>
                     <p className="lead mt-4">
-                      No Account? <a href="/register">register</a>
+                      No Account? <a href="/register">Register</a>
                     </p>
                   </div>
                 </div>
